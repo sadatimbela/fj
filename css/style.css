@@ -1,0 +1,416 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+:root {
+    --primary-navy: #1E3A5F;
+    --secondary-gold: #F1A83A;
+    --white: #FFFFFF;
+    --dark-text: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--primary-navy);
+    color: var(--dark-text);
+    overflow: hidden; /* Prevents scrollbars from appearing */
+}
+
+/* --- VIDEO BACKGROUND --- */
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+#hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(30, 58, 95, 0.15), rgba(30, 58, 95, 0.35));
+    z-index: -1;
+}
+
+/* --- HEADER & NAVIGATION --- */
+.main-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 2rem 4rem;
+    z-index: 10;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    display: block;
+}
+
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: var(--primary-navy);
+    font-weight: 600;
+    font-size: 1rem;
+    letter-spacing: 1px;
+    position: relative;
+    padding-bottom: 0.5rem;
+    transition: letter-spacing 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-menu li a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%;
+    height: 2px;
+    background-color: var(--secondary-gold);
+    transition: width 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.nav-menu li a:hover {
+    letter-spacing: 2px;
+}
+
+.nav-menu li a:hover::after {
+    width: 100%;
+}
+
+/* --- HERO SECTION --- */
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+.main-headline {
+    font-size: 4.5vw;
+    font-weight: 600;
+    color: var(--primary-navy);
+    line-height: 1.2;
+    position: relative; /* For reflection */
+}
+
+.main-headline .word {
+    display: inline-block;
+}
+
+.subtext {
+    font-size: 1.2rem;
+    font-weight: 300;
+    margin-top: 1.5rem;
+    color: var(--dark-text);
+}
+
+/* --- LOADING INDICATOR --- */
+.loading-indicator {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.ring {
+    width: 80px;
+    height: 80px;
+    border: 3px solid var(--primary-navy);
+    border-radius: 50%;
+    position: relative;
+}
+
+.loading-text {
+    font-size: 0.9rem;
+    color: var(--primary-navy);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+/* --- ANIMATIONS & MICRO-ANIMATIONS --- */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes blurIn {
+    from {
+        opacity: 0;
+        filter: blur(5px);
+    }
+    to {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 0 15px 5px rgba(241, 168, 58, 0);
+    }
+    50% {
+        box-shadow: 0 0 25px 10px rgba(241, 168, 58, 0.4);
+    }
+}
+
+@keyframes textReflection {
+    0% {
+        background-position: -150% 50%;
+    }
+    100% {
+        background-position: 150% 50%;
+    }
+}
+
+@keyframes logoShimmer {
+    0%, 10% { transform: translateX(-150%); }
+    20%, 100% { transform: translateX(150%); }
+}
+
+@keyframes dofPulse {
+    0%, 100% {
+        filter: blur(0px);
+    }
+    50% {
+        filter: blur(2px);
+    }
+}
+
+@keyframes breathe {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.003);
+    }
+}
+
+@keyframes scrollDrop {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+@keyframes driftUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+}
+
+@keyframes draftingTicks {
+    0% {
+        transform: scaleY(1);
+    }
+    50% {
+        transform: scaleY(0.4);
+    }
+    100% {
+        transform: scaleY(1);
+    }
+}
+
+
+/* --- Initial States & Animation Application --- */
+
+/* LOGO SHIMMER */
+.logo {
+    position: relative;
+    overflow: hidden;
+}
+.logo::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 20%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.1);
+    transform: rotate(30deg);
+    animation: logoShimmer 30s infinite linear;
+    animation-delay: 5s;
+}
+
+/* NAV MENU FADE-UP */
+.nav-menu li {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+.nav-menu li:nth-child(1) { animation-delay: 0.5s; }
+.nav-menu li:nth-child(2) { animation-delay: 0.65s; }
+.nav-menu li:nth-child(3) { animation-delay: 0.8s; }
+
+/* MAIN HEADLINE ANIMATION */
+.main-headline {
+    animation: breathe 8s infinite ease-in-out;
+}
+.main-headline .word {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeUp 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    animation-delay: 1s;
+}
+.main-headline .word:nth-child(2) { animation-delay: 1.2s; }
+.main-headline .word:nth-child(3) { animation-delay: 1.4s; }
+.main-headline .word:nth-child(4) { animation-delay: 1.6s; }
+
+/* GOLD REFLECTION ON HEADLINE */
+.main-headline::before {
+    content: "Shaping Spaces. Elevating Living.";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    color: transparent;
+    background: linear-gradient(90deg, transparent, var(--secondary-gold), transparent);
+    background-clip: text;
+    -webkit-background-clip: text;
+    background-size: 300% 100%;
+    background-position: center;
+    animation: textReflection 22s infinite linear;
+    animation-delay: 3s;
+}
+
+/* SUBTEXT FADE-IN */
+.subtext {
+    opacity: 0;
+    animation: blurIn 1.2s ease-out forwards;
+    animation-delay: 2s;
+}
+
+/* LOADING INDICATOR ANIMATION */
+.loading-indicator {
+    opacity: 0;
+    animation: fadeUp 1s ease-out forwards;
+    animation-delay: 2.5s;
+}
+.ring {
+    animation: rotate 20s linear infinite;
+    box-shadow: 0 0 25px 10px rgba(241, 168, 58, 0);
+    animation: pulseGlow 4s infinite ease-in-out;
+}
+/* Drafting Ticks */
+.ring::before, .ring::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    background-color: var(--primary-navy);
+    top: -10px;
+    bottom: -10px;
+    left: calc(50% - 1px);
+}
+.ring::before {
+    transform-origin: center;
+    animation: draftingTicks 2s infinite ease-in-out;
+}
+.ring::after {
+    transform: rotate(90deg);
+    transform-origin: center;
+    animation: draftingTicks 2s infinite ease-in-out;
+    animation-delay: 0.5s;
+}
+
+/* SCROLL INDICATOR */
+.scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 40px;
+    background-color: var(--secondary-gold);
+    opacity: 0;
+    animation: scrollDrop 2.5s infinite cubic-bezier(0.645, 0.045, 0.355, 1);
+    animation-delay: 4s;
+}
+
+/* BACKGROUND VIDEO DOF PULSE */
+#hero-video {
+    animation: dofPulse 15s infinite ease-in-out;
+}
+
+/* GOLD DUST PARTICLES */
+.particle-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.particle {
+    position: absolute;
+    bottom: 0;
+    left: var(--x-start);
+    width: var(--size);
+    height: var(--size);
+    background-color: var(--secondary-gold);
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: driftUp var(--duration) var(--delay) linear infinite;
+}
+
