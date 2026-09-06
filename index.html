@@ -1,0 +1,1009 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FJ Visuals — Architectural Design, 3D Visualization &amp; Technical Drawings</title>
+  <meta name="description" content="FJ Visuals designs, visualizes, and develops complete architectural solutions — from bespoke residential concepts and photorealistic 3D CGI to permit-ready technical CAD drawings across Tanzania.">
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./logo.png" type="image/png">
+  <link rel="icon" href="./logo.png" type="image/png">
+
+  <!-- Google Fonts: Plus Jakarta Sans / Poppins -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css?v=4.6">
+
+  <!-- IonIcons -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</head>
+
+<body id="top">
+
+  <!-- 
+    - #HEADER (Minimal Luxury Studio Header with Logo & Architectural Navigation Trigger)
+  -->
+  <header class="header" data-header>
+    <div class="container header-container">
+
+      <!-- Architectural Brand Logo -->
+      <a href="#home" class="logo" aria-label="FJ Visuals Home">
+        <img src="./logo.png" alt="FJ Visuals" class="brand-logo-img">
+      </a>
+
+      <!-- Minimal Architectural Navigation Trigger (42px, crisp, precise) -->
+      <button class="nav-toggle-btn" data-nav-open-btn aria-label="Open Navigation Menu" id="nav-toggle-btn" aria-expanded="false" aria-controls="main-navigation">
+        <span class="toggle-bar"></span>
+        <span class="toggle-bar"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- Dark Frosted Backdrop Overlay -->
+  <div class="overlay" data-overlay aria-hidden="true"></div>
+
+  <!-- Off-Canvas Editorial Architectural Drawer -->
+  <nav class="navbar" data-navbar id="main-navigation" aria-label="Studio Navigation" aria-hidden="true" role="dialog" aria-modal="true">
+    <!-- Drawer Top -->
+    <div class="navbar-top">
+      <a href="#home" class="navbar-drawer-logo" aria-label="FJ Visuals Home" data-nav-link>
+        <img src="./logo.png" alt="FJ Visuals" class="drawer-logo-img">
+      </a>
+      <button class="nav-close-btn" data-nav-close-btn aria-label="Close Navigation Menu" id="nav-close-btn">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Drawer Content (Grouped toward upper-middle) -->
+    <div class="navbar-body">
+      <!-- Main Studio Links -->
+      <ul class="navbar-list" role="menu">
+        <li role="none">
+          <a href="#home" class="navbar-link active" data-nav-link role="menuitem">
+            <span class="nav-rule" aria-hidden="true"></span>
+            <span class="nav-num">01</span>
+            <span class="nav-text">Home</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#services" class="navbar-link" data-nav-link role="menuitem">
+            <span class="nav-rule" aria-hidden="true"></span>
+            <span class="nav-num">02</span>
+            <span class="nav-text">What We Do</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#projects" class="navbar-link" data-nav-link role="menuitem">
+            <span class="nav-rule" aria-hidden="true"></span>
+            <span class="nav-num">03</span>
+            <span class="nav-text">Our Work</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#about" class="navbar-link" data-nav-link role="menuitem">
+            <span class="nav-rule" aria-hidden="true"></span>
+            <span class="nav-num">04</span>
+            <span class="nav-text">Who We Are</span>
+          </a>
+        </li>
+        <li role="none">
+          <a href="#process" class="navbar-link" data-nav-link role="menuitem">
+            <span class="nav-rule" aria-hidden="true"></span>
+            <span class="nav-num">05</span>
+            <span class="nav-text">How We Work</span>
+          </a>
+        </li>
+      </ul>
+
+      <!-- Architectural Hairline Divider -->
+      <div class="nav-divider" aria-hidden="true"></div>
+
+      <!-- Primary Conversion Action -->
+      <div class="nav-action-wrap">
+        <a href="#contact" class="nav-cta-action" data-nav-link id="nav-cta-action" role="menuitem">
+          <span class="cta-action-text">Start a Project</span>
+          <span class="cta-action-arrow" aria-hidden="true">&rarr;</span>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <article>
+
+      <!-- 
+        - #HERO SECTION (Editorial Architectural Proposition)
+      -->
+      <section class="hero" id="home">
+        <!-- Background Video with Poster Fallback -->
+        <video class="hero-bg-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="./assets-main/project2-1.PNG" aria-hidden="true">
+          <source src="./hero.mp4" type="video/mp4">
+        </video>
+        
+        <!-- Directional Dark Gradient Overlay: Strongest behind text on the left, lighter over architecture -->
+        <div class="hero-bg-overlay" aria-hidden="true"></div>
+
+        <div class="container hero-inner">
+          <div class="hero-content">
+            <!-- Dominant Proposition Headline (2-3 lines max) -->
+            <h1 class="hero-headline">
+              Architecture,<br>visualized with precision.
+            </h1>
+
+            <!-- Specific Architectural Statement with restrained gold emphasis -->
+            <p class="hero-statement">
+              From first concept to <span class="gold-emphasis">construction-ready detail</span>.
+            </p>
+
+            <!-- Primary & Secondary CTA Hierarchy -->
+            <div class="hero-cta-group">
+              <a href="#contact" class="btn-hero-primary">
+                <span>Start a Project</span>
+                <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+              <a href="#projects" class="btn-hero-secondary">
+                <span>View Our Work</span>
+                <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Subtle Architectural Gold Rule Between Hero Video and What We Do -->
+        <div class="hero-gold-rule" aria-hidden="true">
+          <div class="gold-hairline"></div>
+        </div>
+      </section>
+
+      <!-- 
+        - #SECTION 2: WHAT WE DO (Warm Architectural Ivory Sheet #F5F3EE)
+      -->
+      <section class="section section-types in-view revealed" id="services">
+        <div class="container services-container">
+          <!-- Architectural Section Header (Staggered Material Entrance) -->
+          <div class="services-header text-center" id="services-header">
+            <span class="services-kicker">WHAT WE DO</span>
+            <h2 class="services-title">Architectural Solutions<br>for Real-World Projects</h2>
+            <p class="services-subtitle">Architectural design, visualization and technical documentation from concept to construction.</p>
+          </div>
+
+          <!-- Editorial Architectural Service Layout (Dominant 01 + Supporting 02-05) -->
+          <div class="services-editorial-wrap" id="services-grid">
+
+            <!-- Visually Dominant Service: 01 ARCHITECTURAL DESIGN -->
+            <div class="service-reveal-card service-dominant-card" data-service="1" tabindex="0" role="region" aria-label="01 Architectural Design">
+              <div class="dominant-card-header">
+                <span class="service-index">01</span>
+                <div class="dominant-title-wrap">
+                  <h3 class="dominant-service-title">ARCHITECTURAL DESIGN</h3>
+                  <p class="dominant-service-desc">
+                    Concept development,<br>planning and design.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Large Visual with 3D House Reveal Animation -->
+              <div class="card-visual-wrapper dominant-visual-wrapper">
+                <img src="./assets/services/service1_render.jpg" alt="Architectural Design 3D Model" class="card-img-layer render-layer" loading="lazy">
+                <img src="./assets/services/service1_wireframe.jpg" alt="Architectural Design Wireframe" class="card-img-layer wireframe-layer" loading="lazy">
+                <div class="reveal-scan-beam"></div>
+              </div>
+
+              <div class="dominant-card-footer">
+                <span class="dominant-scope">Full spatial planning, exterior massing &amp; daylight orientation.</span>
+                <a href="#contact" class="card-link" aria-label="Inquire about Architectural Design">
+                  INQUIRE ABOUT DESIGN <span class="link-arrow">→</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Supporting Services Column (02 to 05) -->
+            <div class="services-supporting-column">
+
+              <!-- 02 HOUSE & VILLA DESIGN -->
+              <div class="service-reveal-card supporting-service-card" data-service="2" tabindex="0" role="region" aria-label="02 House & Villa Design">
+                <div class="supporting-info">
+                  <span class="service-index">02</span>
+                  <div class="supporting-text">
+                    <h4 class="supporting-service-title">HOUSE &amp; VILLA DESIGN</h4>
+                    <p class="supporting-service-desc">Custom living spaces designed around your lifestyle.</p>
+                  </div>
+                </div>
+                <div class="card-visual-wrapper supporting-visual-wrapper">
+                  <img src="./assets/services/service2_render.jpg" alt="House & Villa Design 3D Model" class="card-img-layer render-layer" loading="lazy">
+                  <img src="./assets/services/service2_wireframe.jpg" alt="House & Villa Design Wireframe" class="card-img-layer wireframe-layer" loading="lazy">
+                  <div class="reveal-scan-beam"></div>
+                </div>
+              </div>
+
+              <!-- 03 3D VISUALIZATION -->
+              <div class="service-reveal-card supporting-service-card" data-service="3" tabindex="0" role="region" aria-label="03 3D Visualization">
+                <div class="supporting-info">
+                  <span class="service-index">03</span>
+                  <div class="supporting-text">
+                    <h4 class="supporting-service-title">3D VISUALIZATION</h4>
+                    <p class="supporting-service-desc">Photorealistic CGI that brings your vision to life.</p>
+                  </div>
+                </div>
+                <div class="card-visual-wrapper supporting-visual-wrapper">
+                  <img src="./assets/services/service3_render.jpg" alt="3D Visualization Render" class="card-img-layer render-layer" loading="lazy">
+                  <img src="./assets/services/service3_wireframe.jpg" alt="3D Visualization Wireframe" class="card-img-layer wireframe-layer" loading="lazy">
+                  <div class="reveal-scan-beam"></div>
+                </div>
+              </div>
+
+              <!-- 04 TECHNICAL DRAWINGS -->
+              <div class="service-reveal-card supporting-service-card" data-service="4" tabindex="0" role="region" aria-label="04 Technical Drawings">
+                <div class="supporting-info">
+                  <span class="service-index">04</span>
+                  <div class="supporting-text">
+                    <h4 class="supporting-service-title">TECHNICAL DRAWINGS</h4>
+                    <p class="supporting-service-desc">Permit-ready CAD drawings with precision and detail.</p>
+                  </div>
+                </div>
+                <div class="card-visual-wrapper supporting-visual-wrapper">
+                  <img src="./assets/services/service4_render.jpg" alt="Technical CAD Drawings" class="card-img-layer render-layer" loading="lazy">
+                  <img src="./assets/services/service4_wireframe.jpg" alt="Technical CAD Wireframe" class="card-img-layer wireframe-layer" loading="lazy">
+                  <div class="reveal-scan-beam"></div>
+                </div>
+              </div>
+
+              <!-- 05 SITE PLANNING -->
+              <div class="service-reveal-card supporting-service-card" data-service="5" tabindex="0" role="region" aria-label="05 Site Planning">
+                <div class="supporting-info">
+                  <span class="service-index">05</span>
+                  <div class="supporting-text">
+                    <h4 class="supporting-service-title">SITE PLANNING</h4>
+                    <p class="supporting-service-desc">Smart layouts and set-backs for functional spaces.</p>
+                  </div>
+                </div>
+                <div class="card-visual-wrapper supporting-visual-wrapper">
+                  <img src="./assets/services/service5_render.jpg" alt="Site Planning Aerial Layout" class="card-img-layer render-layer" loading="lazy">
+                  <img src="./assets/services/service5_wireframe.jpg" alt="Site Planning Wireframe Layout" class="card-img-layer wireframe-layer" loading="lazy">
+                  <div class="reveal-scan-beam"></div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 
+        - Architectural Ivory to Navy Transition Zone (120px)
+        - Seamless architectural transition from What We Do (#F5F3EE) to Featured Projects (#0F1B28)
+      -->
+      <div class="ivory-navy-transition-zone" id="services-to-projects" aria-hidden="true">
+        <div class="navy-rising-plane"></div>
+      </div>
+
+      <!-- 
+        - #SECTION 3: OUR WORK / FEATURED ARCHITECTURAL PROJECTS
+      -->
+      <section class="section section-listings" id="projects">
+        <div class="container">
+          <!-- Section Header (Clean, Muted Gold Usage) -->
+          <div class="section-header text-center" data-reveal-header>
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">A curated selection of residential, private estate, and commercial architectural commissions.</p>
+          </div>
+
+          <!-- Asymmetric Architectural Editorial Grid -->
+          <div class="projects-editorial-grid">
+
+            <!-- Project 1: Salasala Modern Residence (Wide Lead) -->
+            <article class="project-card" data-project-id="1">
+              <a href="#contact" class="project-card-link" aria-label="View project: Salasala Modern Residence">
+                <div class="project-media">
+                  <div class="project-slides">
+                    <img src="./assets-main/project1-1.png" alt="Salasala Modern Residence - Perspective 1" class="project-img active" loading="lazy">
+                    <img src="./assets-main/project1-2.png" alt="Salasala Modern Residence - Perspective 2" class="project-img" loading="lazy">
+                    <img src="./assets-main/project1-3.png" alt="Salasala Modern Residence - Perspective 3" class="project-img" loading="lazy">
+                    <img src="./assets-main/project1-4.JPG" alt="Salasala Modern Residence - Perspective 4" class="project-img" loading="lazy">
+                  </div>
+                  <div class="project-media-overlay" aria-hidden="true"></div>
+
+                  <!-- Staggered Pop-Up Thumbnails Strip for Other Project Photos -->
+                  <div class="project-photo-popup-strip" aria-label="Project photo perspectives">
+                    <button type="button" class="photo-thumb-btn active" data-thumb-idx="0" aria-label="Perspective 1 (Main)">
+                      <img src="./assets-main/project1-1.png" alt="Salasala - View 1" loading="lazy">
+                      <span class="thumb-tag">01</span>
+                    </button>
+                    <button type="button" class="photo-thumb-btn" data-thumb-idx="1" aria-label="Perspective 2">
+                      <img src="./assets-main/project1-2.png" alt="Salasala - View 2" loading="lazy">
+                      <span class="thumb-tag">02</span>
+                    </button>
+                    <button type="button" class="photo-thumb-btn" data-thumb-idx="2" aria-label="Perspective 3">
+                      <img src="./assets-main/project1-3.png" alt="Salasala - View 3" loading="lazy">
+                      <span class="thumb-tag">03</span>
+                    </button>
+                    <button type="button" class="photo-thumb-btn" data-thumb-idx="3" aria-label="Perspective 4">
+                      <img src="./assets-main/project1-4.JPG" alt="Salasala - View 4" loading="lazy">
+                      <span class="thumb-tag">04</span>
+                    </button>
+                  </div>
+
+                  <div class="project-indicators" aria-hidden="true">
+                    <span class="project-dot active"></span>
+                    <span class="project-dot"></span>
+                    <span class="project-dot"></span>
+                    <span class="project-dot"></span>
+                  </div>
+                </div>
+
+                <div class="project-identity">
+                  <div class="project-meta-primary">
+                    <h3 class="project-name">Salasala Modern Residence</h3>
+                    <p class="project-location">
+                      <span class="location-glyph" aria-hidden="true">&#x2316;</span> Salasala, Dar es Salaam
+                    </p>
+                  </div>
+                  <div class="project-meta-secondary">
+                    <span class="project-type">Residential Architecture</span>
+                    <span class="project-year">2026</span>
+                  </div>
+                </div>
+
+                <div class="project-action">
+                  <span class="project-view-cta">
+                    <span class="action-label">View Project</span>
+                    <span class="action-arrow" aria-hidden="true">&rarr;</span>
+                  </span>
+                  <button type="button" class="project-inquire-subordinate" data-quote-trigger data-project="Salasala Modern Residence" data-location="Salasala, Dar es Salaam" aria-label="Request quote for Salasala Modern Residence">
+                    Inquire &bull;
+                  </button>
+                </div>
+              </a>
+            </article>
+
+            <!-- Project 2: Tabora Executive Estate -->
+            <article class="project-card" data-project-id="2">
+              <a href="#contact" class="project-card-link" aria-label="View project: Tabora Executive Estate">
+                <div class="project-media">
+                  <div class="project-slides">
+                    <img src="./assets-main/project2-1.PNG" alt="Tabora Executive Estate - View 1" class="project-img active" loading="lazy">
+                    <img src="./assets-main/project2-2.jpg" alt="Tabora Executive Estate - View 2" class="project-img" loading="lazy">
+                    <img src="./assets-main/project2-3.jpg" alt="Tabora Executive Estate - View 3" class="project-img" loading="lazy">
+                    <img src="./assets-main/project2-4.jpg" alt="Tabora Executive Estate - View 4" class="project-img" loading="lazy">
+                  </div>
+                  <div class="project-media-overlay" aria-hidden="true"></div>
+
+                  <!-- Staggered Pop-Up Thumbnails Strip for Other Project Photos -->
+                  <div class="project-photo-popup-strip" aria-label="Project photo perspectives">
+                    <button type="button" class="photo-thumb-btn active" data-thumb-idx="0" aria-label="Perspective 1 (Main)">
+                      <img src="./assets-main/project2-1.PNG" alt="Tabora - View 1" loading="lazy">
+                      <span class="thumb-tag">01</span>
+                    </button>
+                    <button type="button" class="photo-thumb-btn" data-thumb-idx="1" aria-label="Perspective 2">
+                      <img src="./assets-main/project2-2.jpg" alt="Tabora - View 2" loading="lazy">
+                      <span class="thumb-tag">02</span>
+                    </button>
+                    <button type="button" class="photo-thumb-btn" data-thumb-idx="2" aria-label="Perspective 3">
+                      <img src="./assets-main/project2-3.jpg" alt="Tabora - View 3" loading="lazy">
+                      <span class="thumb-tag">03</span>
+                    </button>
+                    <button type="button" class="photo-thumb-btn" data-thumb-idx="3" aria-label="Perspective 4">
+                      <img src="./assets-main/project2-4.jpg" alt="Tabora - View 4" loading="lazy">
+                      <span class="thumb-tag">04</span>
+                    </button>
+                  </div>
+
+                  <div class="project-indicators" aria-hidden="true">
+                    <span class="project-dot active"></span>
+                    <span class="project-dot"></span>
+                    <span class="project-dot"></span>
+                    <span class="project-dot"></span>
+                  </div>
+                </div>
+
+                <div class="project-identity">
+                  <div class="project-meta-primary">
+                    <h3 class="project-name">Tabora Executive Estate</h3>
+                    <p class="project-location">
+                      <span class="location-glyph" aria-hidden="true">&#x2316;</span> Tabora Region, Tanzania
+                    </p>
+                  </div>
+                  <div class="project-meta-secondary">
+                    <span class="project-type">Private Villa &amp; Estate</span>
+                    <span class="project-year">2025</span>
+                  </div>
+                </div>
+
+                <div class="project-action">
+                  <span class="project-view-cta">
+                    <span class="action-label">View Project</span>
+                    <span class="action-arrow" aria-hidden="true">&rarr;</span>
+                  </span>
+                  <button type="button" class="project-inquire-subordinate" data-quote-trigger data-project="Tabora Executive Estate" data-location="Tabora Region, Tanzania" aria-label="Request quote for Tabora Executive Estate">
+                    Inquire &bull;
+                  </button>
+                </div>
+              </a>
+            </article>
+
+            <!-- Project 3: Moshi Contemporary Villa -->
+            <article class="project-card" data-project-id="3">
+              <a href="#contact" class="project-card-link" aria-label="View project: Moshi Contemporary Villa">
+                <div class="project-media">
+                  <div class="project-slides">
+                    <img src="./assets-main/project3-1.PNG" alt="Moshi Contemporary Villa - View 1" class="project-img active" loading="lazy">
+                    <img src="./assets-main/project3-2.jpg" alt="Moshi Contemporary Villa - View 2" class="project-img" loading="lazy">
+                    <img src="./assets-main/project3-3.jpg" alt="Moshi Contemporary Villa - View 3" class="project-img" loading="lazy">
+                    <img src="./assets-main/project3-4.jpg" alt="Moshi Contemporary Villa - View 4" class="project-img" loading="lazy">
+                  </div>
+                  <div class="project-media-overlay" aria-hidden="true"></div>
+
+                  <!-- Staggered Pop-Up Thumbnails Strip for Other Project Photos -->
+                  <div class="project-photo-popup-strip" aria-label="Project photo perspectives">
+                    <button type="button" class="photo-thumb-btn active" data-thumb-idx="0" aria-label="Perspective 1 (Main)">
+                      <img src="./assets-main/project3-1.PNG" alt="Moshi - View 1" loading="lazy">
+                      <span class="thumb-tag">01</span>
+                    </button>
+                    <button type="button" class="photo-thumb-btn" data-thumb-idx="1" aria-label="Perspective 2">
+                      <img src="./assets-main/project3-2.jpg" alt="Moshi - View 2" loading="lazy">
+                      <span class="thumb-tag">02</span>
+                    </button>
+                    <button type="button" class="photo-thumb-btn" data-thumb-idx="2" aria-label="Perspective 3">
+                      <img src="./assets-main/project3-3.jpg" alt="Moshi - View 3" loading="lazy">
+                      <span class="thumb-tag">03</span>
+                    </button>
+                    <button type="button" class="photo-thumb-btn" data-thumb-idx="3" aria-label="Perspective 4">
+                      <img src="./assets-main/project3-4.jpg" alt="Moshi - View 4" loading="lazy">
+                      <span class="thumb-tag">04</span>
+                    </button>
+                  </div>
+
+                  <div class="project-indicators" aria-hidden="true">
+                    <span class="project-dot active"></span>
+                    <span class="project-dot"></span>
+                    <span class="project-dot"></span>
+                    <span class="project-dot"></span>
+                  </div>
+                </div>
+
+                <div class="project-identity">
+                  <div class="project-meta-primary">
+                    <h3 class="project-name">Moshi Contemporary Villa</h3>
+                    <p class="project-location">
+                      <span class="location-glyph" aria-hidden="true">&#x2316;</span> Moshi, Kilimanjaro
+                    </p>
+                  </div>
+                  <div class="project-meta-secondary">
+                    <span class="project-type">Hillside Residential</span>
+                    <span class="project-year">2025</span>
+                  </div>
+                </div>
+
+                <div class="project-action">
+                  <span class="project-view-cta">
+                    <span class="action-label">View Project</span>
+                    <span class="action-arrow" aria-hidden="true">&rarr;</span>
+                  </span>
+                  <button type="button" class="project-inquire-subordinate" data-quote-trigger data-project="Moshi Contemporary Villa" data-location="Moshi, Kilimanjaro" aria-label="Request quote for Moshi Contemporary Villa">
+                    Inquire &bull;
+                  </button>
+                </div>
+              </a>
+            </article>
+
+            <!-- Project 4: Kongowe Residential Compound (Wide Anchor) -->
+            <article class="project-card" data-project-id="4">
+              <a href="#contact" class="project-card-link" aria-label="View project: Kongowe Residential Compound">
+                <div class="project-media">
+                  <div class="project-slides">
+                    <img src="./assets-main/project4.PNG" alt="Kongowe Residential Compound - View 1" class="project-img active" loading="lazy">
+                    <img src="./assets-main/project4-2.jpg" alt="Kongowe Residential Compound - View 2" class="project-img" loading="lazy">
+                    <img src="./assets-main/project4-3.jpg" alt="Kongowe Residential Compound - View 3" class="project-img" loading="lazy">
+                    <img src="./assets-main/project4-4.jpg" alt="Kongowe Residential Compound - View 4" class="project-img" loading="lazy">
+                  </div>
+                  <div class="project-media-overlay" aria-hidden="true"></div>
+
+                  <!-- Staggered Pop-Up Thumbnails Strip for Other Project Photos -->
+                  <div class="project-photo-popup-strip" aria-label="Project photo perspectives">
+                    <button type="button" class="photo-thumb-btn active" data-thumb-idx="0" aria-label="Perspective 1 (Main)">
+                      <img src="./assets-main/project4.PNG" alt="Kongowe - View 1" loading="lazy">
+                      <span class="thumb-tag">01</span>
+                    </button>
+                    <button type="button" class="photo-thumb-btn" data-thumb-idx="1" aria-label="Perspective 2">
+                      <img src="./assets-main/project4-2.jpg" alt="Kongowe - View 2" loading="lazy">
+                      <span class="thumb-tag">02</span>
+                    </button>
+                    <button type="button" class="photo-thumb-btn" data-thumb-idx="2" aria-label="Perspective 3">
+                      <img src="./assets-main/project4-3.jpg" alt="Kongowe - View 3" loading="lazy">
+                      <span class="thumb-tag">03</span>
+                    </button>
+                    <button type="button" class="photo-thumb-btn" data-thumb-idx="3" aria-label="Perspective 4">
+                      <img src="./assets-main/project4-4.jpg" alt="Kongowe - View 4" loading="lazy">
+                      <span class="thumb-tag">04</span>
+                    </button>
+                  </div>
+
+                  <div class="project-indicators" aria-hidden="true">
+                    <span class="project-dot active"></span>
+                    <span class="project-dot"></span>
+                    <span class="project-dot"></span>
+                    <span class="project-dot"></span>
+                  </div>
+                </div>
+
+                <div class="project-identity">
+                  <div class="project-meta-primary">
+                    <h3 class="project-name">Kongowe Residential Compound</h3>
+                    <p class="project-location">
+                      <span class="location-glyph" aria-hidden="true">&#x2316;</span> Kongowe / Mzinga, Dar es Salaam
+                    </p>
+                  </div>
+                  <div class="project-meta-secondary">
+                    <span class="project-type">Master Planned Compound</span>
+                    <span class="project-year">2026</span>
+                  </div>
+                </div>
+
+                <div class="project-action">
+                  <span class="project-view-cta">
+                    <span class="action-label">View Project</span>
+                    <span class="action-arrow" aria-hidden="true">&rarr;</span>
+                  </span>
+                  <button type="button" class="project-inquire-subordinate" data-quote-trigger data-project="Kongowe Residential Compound" data-location="Kongowe / Mzinga, Dar es Salaam" aria-label="Request quote for Kongowe Residential Compound">
+                    Inquire &bull;
+                  </button>
+                </div>
+              </a>
+            </article>
+
+          </div>
+
+          <!-- Section Bottom CTA: View All Projects -> Start a Project -->
+          <div class="projects-section-footer">
+            <a href="#contact" class="btn-view-all-projects" aria-label="View all architectural projects">
+              <span>View All Projects</span>
+              <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+            </a>
+            <div class="projects-sub-cta">
+              <span>Have a site or concept ready to design?</span>
+              <a href="#contact" class="sub-cta-link" data-quote-trigger data-project="Custom Architectural Design" data-location="Tanzania">Start a Project &rarr;</a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+
+
+      <!-- 
+        - #SECTION 5: WHO WE ARE — ARCHITECTURAL STUDIO PROFILE (12-Column Editorial Grid)
+      -->
+      <section class="section section-about-clean" id="about">
+        <div class="container">
+          <div class="about-grid-12">
+
+            <!-- Left Column: Architectural Evidence Image (approx 5 Columns) -->
+            <div class="about-media-col">
+              <div class="about-image-wrapper">
+                <img src="./assets/services/service1_render.jpg" alt="Architectural design and technical documentation: CAD drafting to 3D visualization" class="about-architectural-img" loading="lazy">
+              </div>
+            </div>
+
+            <!-- Right Column: Editorial Textual Content (approx 7 Columns) -->
+            <div class="about-content-col">
+              <!-- Small Unboxed Section Label at the Top -->
+              <span class="about-eyebrow">WHO WE ARE</span>
+
+              <!-- Main Headline -->
+              <h2 class="about-headline">We turn architectural ideas into buildable realities.</h2>
+
+              <!-- Concise Studio Description -->
+              <p class="about-description">
+                FJ Visuals is an architectural design and visualization studio combining creative design, technical documentation and 3D visualization to help clients move confidently from concept to construction.
+              </p>
+
+              <!-- Three Numbered Capability Rows -->
+              <div class="about-capabilities-list">
+                <div class="about-capability-row">
+                  <span class="cap-num">01</span>
+                  <div class="cap-text">
+                    <h3 class="cap-title">ARCHITECTURAL DESIGN</h3>
+                    <p class="cap-detail">Concept development &bull; Planning &bull; Design</p>
+                  </div>
+                </div>
+
+                <div class="about-capability-row">
+                  <span class="cap-num">02</span>
+                  <div class="cap-text">
+                    <h3 class="cap-title">VISUALIZATION</h3>
+                    <p class="cap-detail">3D CGI &bull; Rendering &bull; Spatial presentation</p>
+                  </div>
+                </div>
+
+                <div class="about-capability-row">
+                  <span class="cap-num">03</span>
+                  <div class="cap-text">
+                    <h3 class="cap-title">TECHNICAL DELIVERY</h3>
+                    <p class="cap-detail">CAD drawings &bull; Documentation &bull; Construction detail</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- 
+        - #SECTION 6: HOW WE WORK (The 6-Step Architectural Journey)
+      -->
+      <!-- 
+        - #SECTION 6: HOW WE WORK (The 6-Step Architectural Journey with Timeline Draw)
+      -->
+      <section class="section section-process-clean" id="process">
+        <div class="container">
+          <!-- Section Header (Clean, Simplified, Architectural Typography) -->
+          <div class="process-timeline-header text-center" data-reveal-header>
+            <span class="process-eyebrow">HOW WE WORK</span>
+            <h2 class="process-main-title">From Concept to Construction</h2>
+            <p class="process-main-subtitle">
+              A clear process that takes your project from the first conversation to construction-ready documentation.
+            </p>
+          </div>
+
+          <!-- Alternating Architectural Timeline Tree (5 Steps) -->
+          <div class="timeline-tree" id="timeline-tree">
+            <!-- Central Line Track & Progressive Draw Line -->
+            <div class="timeline-line-track" aria-hidden="true">
+              <div class="timeline-line-progress" id="timeline-line-progress"></div>
+            </div>
+
+            <!-- Step 01 (Left: Image + Text) -->
+            <div class="timeline-row row-left" data-step="1">
+              <div class="timeline-step-wrap">
+                <div class="timeline-image-frame">
+                  <img src="./assets/services/service1_render.jpg" alt="Client Consultation - Architectural Design and Planning" loading="lazy">
+                </div>
+                <div class="timeline-content">
+                  <span class="step-num-label">STEP 01</span>
+                  <h3 class="step-title">Client Consultation</h3>
+                  <p class="step-desc">We understand your goals, lifestyle, site conditions and budget before design begins.</p>
+                </div>
+              </div>
+              <div class="timeline-node" aria-hidden="true"></div>
+            </div>
+
+            <!-- Step 02 (Right: Text + Image) -->
+            <div class="timeline-row row-right" data-step="2">
+              <div class="timeline-node" aria-hidden="true"></div>
+              <div class="timeline-step-wrap">
+                <div class="timeline-content">
+                  <span class="step-num-label">STEP 02</span>
+                  <h3 class="step-title">Concept Development</h3>
+                  <p class="step-desc">We develop the initial spatial ideas, layouts and architectural direction.</p>
+                </div>
+                <div class="timeline-image-frame">
+                  <img src="./assets-main/project2-4.jpg" alt="Concept Development - Floor Plan and Spatial Flow" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 03 (Left: Image + Text) -->
+            <div class="timeline-row row-left" data-step="3">
+              <div class="timeline-step-wrap">
+                <div class="timeline-image-frame">
+                  <img src="./assets-main/project3-2.jpg" alt="Architectural Design - Massing, Façade and Daylight" loading="lazy">
+                </div>
+                <div class="timeline-content">
+                  <span class="step-num-label">STEP 03</span>
+                  <h3 class="step-title">Architectural Design</h3>
+                  <p class="step-desc">We refine plans, proportions, materials, daylight and façade design.</p>
+                </div>
+              </div>
+              <div class="timeline-node" aria-hidden="true"></div>
+            </div>
+
+            <!-- Step 04 (Right: Text + Image) -->
+            <div class="timeline-row row-right" data-step="4">
+              <div class="timeline-node" aria-hidden="true"></div>
+              <div class="timeline-step-wrap">
+                <div class="timeline-content">
+                  <span class="step-num-label">STEP 04</span>
+                  <h3 class="step-title">3D Visualization</h3>
+                  <p class="step-desc">We produce photorealistic 3D renderings to test light, materials and spatial experience.</p>
+                </div>
+                <div class="timeline-image-frame">
+                  <img src="./assets/services/service3_render.jpg" alt="3D Visualization - Spatial Photorealistic CGI" loading="lazy">
+                </div>
+              </div>
+            </div>
+
+            <!-- Step 05 (Left: Image + Text) -->
+            <div class="timeline-row row-left" data-step="5">
+              <div class="timeline-step-wrap">
+                <div class="timeline-image-frame">
+                  <img src="./assets/services/service4_render.jpg" alt="Technical Delivery - CAD Documentation and Drawings" loading="lazy">
+                </div>
+                <div class="timeline-content">
+                  <span class="step-num-label">STEP 05</span>
+                  <h3 class="step-title">Technical Delivery</h3>
+                  <p class="step-desc">We deliver millimeter-accurate CAD documentation and drawings ready for construction.</p>
+                </div>
+              </div>
+              <div class="timeline-node" aria-hidden="true"></div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+
+      <!-- 
+        - #SECTION 7: FINAL CTA (Confident Architectural Studio Closing Statement)
+      -->
+      <section class="section section-cta-clean" id="contact">
+        <div class="container text-center">
+          <div class="final-cta-wrapper">
+            <!-- Unboxed Section Label -->
+            <span class="final-cta-eyebrow">READY TO START?</span>
+
+            <!-- Single White Headline -->
+            <h2 class="final-cta-headline">Ready to bring your project to life?</h2>
+
+            <!-- Supporting Copy -->
+            <p class="final-cta-desc">
+              Tell us what you're planning, and we'll help define the right next step.
+            </p>
+
+            <!-- Decisive Architectural Gold Button -->
+            <div class="final-cta-action">
+              <button type="button" class="btn-final-cta" id="btn-submit-inquiry" data-quote-trigger data-project="Custom Architectural Design" aria-label="Start your architectural project">
+                <span>Start Your Project</span>
+                <span class="cta-arrow" aria-hidden="true">&rarr;</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </article>
+  </main>
+
+  <!-- 
+    - #FOOTER
+  -->
+  <footer class="footer-dark">
+    <div class="container footer-content">
+      <div class="footer-brand">
+        <a href="#home" class="logo" aria-label="FJ Visuals">
+          <img src="./logo.png" alt="FJ Visuals" class="brand-logo-img footer-logo-img">
+        </a>
+        <p class="footer-tag">
+          Architectural Design &bull; House Design &bull; 3D Visualization &bull; Technical CAD Drawings &bull; Site Planning &bull; Building Solutions
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home">Home</a>
+        <a href="#services">Services</a>
+        <a href="#projects">Our Work</a>
+        <a href="#about">Who We Are</a>
+        <a href="#contact">Start a Project</a>
+      </div>
+    </div>
+
+    <div class="container footer-copy">
+      <p>&copy; 2026 <strong>FJ Visuals</strong>. Architectural Design, 3D Renders &amp; Technical Drawings. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ============================================
+       ARCHITECTURAL PHOTO LIGHTBOX MODAL (POP-UP)
+       ============================================ -->
+  <div class="photo-lightbox-backdrop" id="photo-lightbox" aria-hidden="true" role="dialog" aria-labelledby="lightbox-title">
+    <div class="photo-lightbox-panel">
+      <!-- Close Button -->
+      <button type="button" class="lightbox-close-btn" id="lightbox-close-btn" aria-label="Close photo gallery">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <!-- Lightbox Header / Caption -->
+      <div class="lightbox-header">
+        <div class="lightbox-meta">
+          <span class="lightbox-badge"><ion-icon name="eye-outline"></ion-icon> Architectural Perspective</span>
+          <h3 id="lightbox-title" class="lightbox-title">Salasala Modern Residence</h3>
+          <p id="lightbox-location" class="lightbox-location">&#x2316; Salasala, Dar es Salaam</p>
+        </div>
+        <div class="lightbox-counter" id="lightbox-counter">View 1 of 4</div>
+      </div>
+
+      <!-- Main Stage -->
+      <div class="lightbox-stage">
+        <button type="button" class="lightbox-nav-btn prev" id="lightbox-prev-btn" aria-label="Previous photo">
+          <ion-icon name="chevron-back-outline"></ion-icon>
+        </button>
+
+        <div class="lightbox-image-wrap">
+          <img src="./assets-main/project1-1.png" alt="Project perspective" id="lightbox-main-img" class="lightbox-img">
+        </div>
+
+        <button type="button" class="lightbox-nav-btn next" id="lightbox-next-btn" aria-label="Next photo">
+          <ion-icon name="chevron-forward-outline"></ion-icon>
+        </button>
+      </div>
+
+      <!-- Bottom Filmstrip of other project photos -->
+      <div class="lightbox-filmstrip" id="lightbox-filmstrip" aria-label="Photo perspectives filmstrip">
+        <!-- Injected via JS dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================
+       ARCHITECTURAL PROJECT INQUIRY MODAL
+       ============================================ -->
+  <div class="quote-modal-backdrop" id="quote-modal" aria-hidden="true" role="dialog" aria-labelledby="quote-modal-title">
+    <div class="quote-modal-panel">
+      <!-- Modal Close Button -->
+      <button type="button" class="quote-modal-close" id="quote-modal-close" aria-label="Close project inquiry dialog">
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+      <!-- Context Header (Direct & Professional) -->
+      <div class="quote-modal-header">
+        <h2 id="quote-modal-title" class="quote-modal-title">Start Your Project</h2>
+        <p class="quote-modal-lead">
+          Tell us a little about your project and we'll get back to you with the next steps.
+        </p>
+        <p class="quote-modal-context">
+          Project type: <strong id="quote-target-project">Custom Architectural Design</strong>
+        </p>
+      </div>
+
+      <!-- Project Inquiry Form -->
+      <form id="instant-quote-form" class="quote-modal-form" novalidate>
+        <div class="quote-form-grid">
+
+          <!-- Your Name (Required) -->
+          <div class="quote-form-group" id="group-quote-name">
+            <label for="quote-name" class="quote-label">
+              Your Name <span class="quote-label-req">*</span>
+            </label>
+            <input type="text" id="quote-name" name="name" class="quote-input" placeholder="e.g. John Mwangi" required autocomplete="name">
+            <span class="quote-field-error" id="quote-name-error">Please enter your name.</span>
+          </div>
+
+          <!-- Phone / WhatsApp (Required) -->
+          <div class="quote-form-group" id="group-quote-phone">
+            <label for="quote-phone" class="quote-label">
+              Phone / WhatsApp <span class="quote-label-req">*</span>
+            </label>
+            <input type="tel" id="quote-phone" name="phone" class="quote-input" required placeholder="+255 7XX XXX XXX" autocomplete="tel">
+            <span class="quote-field-error" id="quote-phone-error">Please enter a valid phone or WhatsApp number.</span>
+          </div>
+
+          <!-- Project Type (First-Class Information) -->
+          <div class="quote-form-group quote-full-width">
+            <label class="quote-label">
+              Project Type <span class="quote-label-req">*</span>
+            </label>
+            <div class="quote-type-toggle-group" id="quote-type-selector" role="radiogroup" aria-label="Project Type">
+              <button type="button" class="type-pill-btn active" data-type="Residential" role="radio" aria-checked="true">
+                Residential
+              </button>
+              <button type="button" class="type-pill-btn" data-type="Commercial" role="radio" aria-checked="false">
+                Commercial
+              </button>
+              <button type="button" class="type-pill-btn" data-type="Other" role="radio" aria-checked="false">
+                Other
+              </button>
+            </div>
+            <input type="hidden" id="quote-project-type" name="project_type" value="Residential">
+          </div>
+
+          <!-- Conditional Scope Details -->
+          <div class="quote-form-group quote-full-width" id="conditional-scope-container">
+            <!-- Residential: Number of Bedrooms / Rooms -->
+            <div class="scope-pane active" id="scope-residential">
+              <label class="quote-label">
+                Number of Bedrooms / Rooms
+              </label>
+              <div class="quote-bedrooms-selector" id="quote-rooms-selector" role="radiogroup" aria-label="Number of bedrooms">
+                <button type="button" class="room-pill-btn" data-rooms="1–2" role="radio" aria-checked="false">1–2</button>
+                <button type="button" class="room-pill-btn active" data-rooms="3–4" role="radio" aria-checked="true">3–4</button>
+                <button type="button" class="room-pill-btn" data-rooms="5+" role="radio" aria-checked="false">5+</button>
+                <button type="button" class="room-pill-btn" data-rooms="Not sure" role="radio" aria-checked="false">Not sure</button>
+              </div>
+              <input type="hidden" id="quote-rooms" name="rooms" value="3–4">
+            </div>
+
+            <!-- Commercial: Building Type / Scale -->
+            <div class="scope-pane" id="scope-commercial" style="display: none;">
+              <label for="quote-commercial-type" class="quote-label">
+                Building Type / Approximate Scale
+              </label>
+              <input type="text" id="quote-commercial-type" name="commercial_type" class="quote-input" placeholder="e.g. Office, Retail, Boutique Hotel">
+            </div>
+
+            <!-- Other: Scope / Category -->
+            <div class="scope-pane" id="scope-other" style="display: none;">
+              <label for="quote-other-scope" class="quote-label">
+                Project Category / Scope
+              </label>
+              <input type="text" id="quote-other-scope" name="other_scope" class="quote-input" placeholder="e.g. Masterplanning, Interior Renovation">
+            </div>
+          </div>
+
+          <!-- Project Location (Required) -->
+          <div class="quote-form-group" id="group-quote-location">
+            <label for="quote-location" class="quote-label">
+              Project Location <span class="quote-label-req">*</span>
+            </label>
+            <input type="text" id="quote-location" name="location" class="quote-input" required placeholder="e.g. Salasala, Dar es Salaam">
+            <span class="quote-field-error" id="quote-location-error">Please enter the project location.</span>
+          </div>
+
+          <!-- Approximate Area -->
+          <div class="quote-form-group" id="group-quote-area">
+            <div class="quote-label-row">
+              <label for="quote-sqm" class="quote-label">Approximate Area</label>
+              <button type="button" class="area-not-sure-btn" id="area-not-sure-btn" aria-pressed="false">Not sure</button>
+            </div>
+            <div class="quote-clean-area-wrap">
+              <input type="number" id="quote-sqm" name="area_sqm" class="quote-input" min="20" max="25000" placeholder="250" value="250">
+              <span class="quote-area-unit" aria-hidden="true">m²</span>
+            </div>
+          </div>
+
+          <!-- Tell Us About Your Project (Textarea) -->
+          <div class="quote-form-group quote-full-width">
+            <label for="quote-desc" class="quote-label">
+              Tell Us About Your Project
+            </label>
+            <textarea id="quote-desc" name="description" class="quote-textarea" rows="3" placeholder="What are you planning to build? (e.g. key requirements, style preferences, or timeline)"></textarea>
+          </div>
+
+        </div>
+
+        <!-- Submit Button -->
+        <div class="quote-modal-actions">
+          <button type="submit" class="quote-submit-btn" id="quote-submit-btn">
+            <span class="btn-text">Send Project Inquiry</span>
+            <span class="btn-arrow" aria-hidden="true">&rarr;</span>
+          </button>
+        </div>
+
+        <!-- Shorter, Credible Confidentiality Line -->
+        <p class="quote-security-note">
+          Your information is kept confidential.
+        </p>
+      </form>
+
+      <!-- Success State (Revealed after submission) -->
+      <div id="quote-success-panel" class="quote-success-panel" style="display: none;">
+        <div class="quote-success-icon" aria-hidden="true">
+          <ion-icon name="checkmark-outline"></ion-icon>
+        </div>
+        <h3 class="quote-success-title">Project Inquiry Received</h3>
+        <p class="quote-success-desc" id="quote-success-msg">
+          We'll contact you shortly to discuss the project.
+        </p>
+        <button type="button" class="quote-success-close-btn" id="quote-success-done-btn">Done</button>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="./assets/js/script.js?v=4.6"></script>
+</body>
+
+</html>
